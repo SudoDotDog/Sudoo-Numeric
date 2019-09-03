@@ -1,0 +1,25 @@
+{
+  "name": "@sudoo/numeric",
+  "version": "1.0.0",
+  "description": ":1234: Numeric",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SudoDotDog/Sudoo-Numeric.git"
+  },
+  "author": "WMXPY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SudoDotDog/Sudoo-Numeric/issues"
+  },
+  "homepage": "https://github.com/SudoDotDog/Sudoo-Numeric#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@sudoo/io": "^1.6.1",
+    "@sudoo/mock": "^1.2.0",
+    "@sudoo/triforce": "^1.8.2"
+  }
+}
