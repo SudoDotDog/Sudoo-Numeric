@@ -37,4 +37,29 @@ describe('Given [CSV] helper methods', (): void => {
 
         expect(result).to.be.equal(expected);
     });
+
+    it('should be able to convert with space', (): void => {
+
+        const header1: string = chance.string();
+        const header2: string = chance.string();
+
+        const value11: string = chance.string() + ' ' + chance.string();
+        const value12: string = chance.string();
+
+        const value21: string = chance.string();
+        const value22: string = chance.string();
+
+        const target = [{
+            [header1]: value11,
+            [header2]: value12,
+        }, {
+            [header1]: value21,
+            [header2]: value22,
+        }];
+
+        const result: string = objectToCSV(target);
+        const expected: string = `${header1},${header2}\n"${value11}",${value12}\n${value21},${value22}`;
+
+        expect(result).to.be.equal(expected);
+    });
 });
