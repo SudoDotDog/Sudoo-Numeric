@@ -17,6 +17,10 @@ export const objectToCSV = (obj: Array<Record<string, string | number>>): string
                     return `"${text}"`;
                 }
 
+                if (text.includes(',')) {
+                    return `"${text}"`;
+                }
+
                 return text;
             }).join(',');
         });
