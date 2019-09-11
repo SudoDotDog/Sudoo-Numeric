@@ -29,7 +29,7 @@ export const objectToCSV = (obj: Array<Record<string, string | number>>): string
     return '';
 };
 
-export const CSVToObject = (csv: string): Array<Record<string, string | number>> => {
+export const CSVToObject = (csv: string): Array<Record<string, string>> => {
 
     const lines: string[] = csv.split(/\r\n|\n/);
     if (lines.length < 2) {
@@ -38,7 +38,7 @@ export const CSVToObject = (csv: string): Array<Record<string, string | number>>
 
     const firstLine: string = lines.shift() as string;
     const headers: string[] = firstLine.split(',');
-    const result: Array<Record<string, string | number>> = [];
+    const result: Array<Record<string, string>> = [];
 
     for (const line of lines) {
 
@@ -46,7 +46,7 @@ export const CSVToObject = (csv: string): Array<Record<string, string | number>>
         if (each.length !== headers.length) {
             return [];
         }
-        result.push(each.reduce((previous: Record<string, string | number>, current: string, index: number) => {
+        result.push(each.reduce((previous: Record<string, string>, current: string, index: number) => {
 
             const parsed: string = current.replace(/^"/, '').replace(/"$/, '');
 
