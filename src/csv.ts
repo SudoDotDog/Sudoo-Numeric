@@ -28,3 +28,34 @@ export const objectToCSV = (obj: Array<Record<string, string | number>>): string
     }
     return '';
 };
+
+export const CSVToObject = (csv: string): Array<Record<string, string | number>> => {
+
+    const lines: string[] = csv.split(/\r\n|\n/);
+    if (lines.length < 2) {
+        return [];
+    }
+
+    const firstLine: string = lines.shift() as string;
+    const headers: string[] = firstLine.split(',');
+    const result: Array<Record<string, string | number>> = [];
+
+    for (const line of lines) {
+
+        const each: string[] = line.split(',');
+        if (each.length !== headers.length) {
+            return [];
+        }
+        result.push(each.reduce((previous: Record<string, string | number>, current: string, index: number) => {
+
+            const parsed: string = current.replace(/^"/, '').replace(/"$/, '');
+
+            return {
+                ...previous,
+                [headers[index]]: parsed,
+            };
+        }, {}));
+    }
+
+    return result;
+};

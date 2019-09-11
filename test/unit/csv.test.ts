@@ -7,7 +7,7 @@
 
 import { expect } from "chai";
 import * as Chance from "chance";
-import { objectToCSV } from "../../src";
+import { CSVToObject, objectToCSV } from "../../src";
 
 describe('Given [CSV] helper methods', (): void => {
 
@@ -36,6 +36,9 @@ describe('Given [CSV] helper methods', (): void => {
         const expected: string = `${header1},${header2}\n${value11},${value12}\n${value21},${value22}`;
 
         expect(result).to.be.equal(expected);
+
+        const reversed = CSVToObject(result);
+        expect(reversed).to.be.deep.equal(target);
     });
 
     it('should be able to convert with space', (): void => {
@@ -61,5 +64,8 @@ describe('Given [CSV] helper methods', (): void => {
         const expected: string = `${header1},${header2}\n"${value11}",${value12}\n${value21},${value22}`;
 
         expect(result).to.be.equal(expected);
+
+        const reversed = CSVToObject(result);
+        expect(reversed).to.be.deep.equal(target);
     });
 });
