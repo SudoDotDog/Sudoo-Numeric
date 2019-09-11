@@ -35,5 +35,6 @@ export const parseCSVLine = (line: string): string[] => {
         buffer += char;
     }
 
+    result.push(buffer);
     return result;
 };

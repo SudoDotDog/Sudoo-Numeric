@@ -1,3 +1,5 @@
+import { parseCSVLine } from "./util";
+
 /**
  * @author WMXPY
  * @namespace Numeric
@@ -42,69 +44,9 @@ export const CSVToObject = (csv: string): Array<Record<string, string>> => {
     const headers: string[] = firstLine.split(',');
     const result: Array<Record<string, string>> = [];
 
-    console.log(lines);
-
     for (const line of lines) {
 
-        const splited: string[] = line.split(',');
-        const combined = splited.reduce((previous, current: string) => {
-
-            console.log(previous, current);
-
-            if (current.length === 0) {
-                if (previous.quoting) {
-                    return previous;
-                }
-            }
-
-            if (previous.quoting) {
-                if (current[current.length - 1] === '"') {
-                    return {
-                        list: [...previous.list, previous.buffer + current.substring(0, current.length - 1)],
-                        quoting: false,
-                        buffer: '',
-                    };
-                }
-
-                return {
-                    ...previous,
-                    buffer: previous.buffer + current,
-                };
-            }
-
-            if (current[0] === '"') {
-                return {
-                    ...previous,
-                    quoting: true,
-                    buffer: current,
-                };
-            }
-
-            if (previous.buffer) {
-                return {
-                    list: [...previous.list, previous.buffer, current],
-                    buffer: '',
-                    quoting: false,
-                };
-            }
-
-            return {
-                ...previous,
-                list: [...previous.list, current],
-            };
-        }, {
-            list: [],
-            buffer: '',
-            quoting: false,
-        } as {
-            readonly list: string[];
-            readonly buffer: string;
-            readonly quoting: boolean;
-        });
-
-        const each: string[] = combined.list;
-        console.log(each.length, each);
-
+        const each: string[] = parseCSVLine(line);
         if (each.length !== headers.length) {
             return [];
         }
