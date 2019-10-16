@@ -1,10 +1,10 @@
-import { parseCSVLine } from "./util";
-
 /**
  * @author WMXPY
- * @namespace Numeric
+ * @namespace Numeric_CSV
  * @description CSV
  */
+
+import { parseCSVLine } from "./util";
 
 export const objectToCSV = (obj: Array<Record<string, string | number>>): string => {
 

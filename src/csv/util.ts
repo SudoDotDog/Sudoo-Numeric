@@ -1,6 +1,6 @@
 /**
  * @author WMXPY
- * @namespace Numeric
+ * @namespace Numeric_CSV
  * @description Util
  */
 
