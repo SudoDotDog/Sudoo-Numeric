@@ -31,8 +31,6 @@ export const objectToCSV = (obj: Array<Record<string, string | number>>): string
     return '';
 };
 
-
-
 export const CSVToObject = (csv: string): Array<Record<string, string>> => {
 
     const lines: string[] = csv.split(/\r\n|\n/);
