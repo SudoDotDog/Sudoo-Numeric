@@ -39,6 +39,20 @@ export class CSVBuilder<A extends string[]> {
 
     public toString(): string {
 
-        return [this._keys.join(','), ...this._contents.map((content) => content.join(','))].join('\n');
+        const contents: string[] = this._contents.map((current: A) => {
+            return current.map((value: string) => {
+
+                if (value.includes(' ')) {
+                    return `"${value}"`;
+                }
+
+                if (value.includes(',')) {
+                    return `"${value}"`;
+                }
+
+                return value;
+            }).join(',');
+        });
+        return [this._keys.join(','), ...contents].join('\n');
     }
 }
