@@ -1,13 +1,13 @@
 /**
  * @author WMXPY
- * @namespace Numeric
+ * @namespace Numeric_CSV
  * @description CSV
  * @override Unit Test
  */
 
 import { expect } from "chai";
 import * as Chance from "chance";
-import { CSVToObject, objectToCSV } from "../../src";
+import { CSVToObject, objectToCSV } from "../../../src";
 
 describe('Given [CSV] helper methods', (): void => {
 

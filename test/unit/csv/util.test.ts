@@ -1,13 +1,13 @@
 /**
  * @author WMXPY
- * @namespace Numeric
+ * @namespace Numeric_CSV
  * @description Util
  * @override Unit Test
  */
 
 import { expect } from "chai";
 import * as Chance from "chance";
-import { parseCSVLine } from "../../src/util";
+import { parseCSVLine } from "../../../src/csv/util";
 
 describe('Given [Util] helper methods', (): void => {
 

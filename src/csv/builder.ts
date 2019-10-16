@@ -11,17 +11,30 @@ export class CSVBuilder<A extends string[]> {
         return new CSVBuilder<A>(fields);
     }
 
-    private _keys: A;
-    private _contents: A[];
+    private readonly _keys: A;
+    private readonly _contents: A[];
 
     private constructor(fields: A) {
 
         this._keys = fields;
+        this._contents = [];
     }
 
-    public append(row: A) {
+    public get length(): number {
+
+        return this._contents.length;
+    }
+
+    public append(...row: A): this {
 
         this._contents.push(row);
+        return this;
+    }
+
+    public row(row: A): this {
+
+        this._contents.push(row);
+        return this;
     }
 
     public toString(): string {
