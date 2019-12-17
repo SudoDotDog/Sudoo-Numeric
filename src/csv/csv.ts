@@ -6,6 +6,19 @@
 
 import { parseCSVLine } from "./util";
 
+const fixString = (text: any): string => {
+    if (text === undefined) {
+        return "";
+    }
+    if (text === null) {
+        return "";
+    }
+    if (text.toString) {
+        return text.toString();
+    }
+    return String(text);
+};
+
 export const objectToCSV = (obj: Array<Record<string, string | number>>): string => {
 
     if (obj.length > 0) {
@@ -14,7 +27,7 @@ export const objectToCSV = (obj: Array<Record<string, string | number>>): string
         const contents: string[] = obj.map((current: Record<string, string | number>) => {
             return Object.keys(current).map((key: string) => {
 
-                const text: string = current[key].toString();
+                const text: string = fixString(current[key]);
                 if (text.includes(' ')) {
                     return `"${text}"`;
                 }
