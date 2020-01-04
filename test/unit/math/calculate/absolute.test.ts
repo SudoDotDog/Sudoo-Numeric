@@ -16,7 +16,8 @@ describe('Given [Math-Absolute] Help Function', (): void => {
     it('should be able to calculate absolute', (): void => {
 
         const testNumber = chance.natural({
-            max: 1000,
+            min: 10000,
+            max: 10000,
         });
 
         const result: number = UNSAFE_absolute(-testNumber);
