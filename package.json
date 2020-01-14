@@ -18,7 +18,7 @@
   "homepage": "https://github.com/SudoDotDog/Sudoo-Numeric#readme",
   "dependencies": {},
   "devDependencies": {
-    "@sudoo/io": "^1.6.1",
+    "@sudoo/io": "^1.6.2",
     "@sudoo/mock": "^1.2.0",
     "@sudoo/triforce": "^2.1.0"
   }
