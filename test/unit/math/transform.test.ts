@@ -11,7 +11,7 @@ import { UNSAFE_transformToInteger } from "../../../src/math/transform";
 
 describe('Given [Math-Transform] Help Function', (): void => {
 
-    const chance: Chance.Chance = new Chance('numeric-math-transform2');
+    const chance: Chance.Chance = new Chance('numeric-math-transform');
 
     it('should be able to transform to integer', (): void => {
 
