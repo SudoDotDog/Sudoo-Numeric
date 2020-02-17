@@ -1,6 +1,6 @@
 /**
  * @author WMXPY
- * @namespace Numeric_Unit
+ * @namespace Numeric_Number
  * @description Deconstruction
  */
 
