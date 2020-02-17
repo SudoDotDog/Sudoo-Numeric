@@ -86,5 +86,17 @@ describe('Given [Shuffle-Array] Help Function', (): void => {
             [original[2], original[5]],
         ].map((value: string[]) => value.map((each: string) => each + '!')));
     });
+
+    it('should be able to evenly deploy array - zero', (): void => {
+
+        const original: string[] = [
+            chance.string(),
+            chance.string(),
+            chance.string(),
+        ];
+
+        const result: string[][] = evenlyDeployArray(original, 0);
+        expect(result).to.be.deep.equal([]);
+    });
 });
 // tslint:enable: no-magic-numbers
