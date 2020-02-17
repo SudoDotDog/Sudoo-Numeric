@@ -4,6 +4,21 @@
  * @description Deconstruction
  */
 
+export const evenlySeparateNumber = (target: number, length: number): number[] => {
+
+    const unit: number = Math.floor(target / length);
+    const consumed: number = unit * length;
+    const difference: number = target - consumed;
+
+    const result: number[] = [];
+    for (let i = 0; i < length; i++) {
+
+        const shouldAdd: boolean = i < difference;
+        result.push(shouldAdd ? unit + 1 : unit);
+    }
+    return result;
+};
+
 export const evenlySplitNumber = (target: number, gap: number): number[] => {
 
     const intTarget: number = Math.floor(target);
