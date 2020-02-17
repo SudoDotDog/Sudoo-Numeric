@@ -7,12 +7,36 @@
 
 import { expect } from "chai";
 import * as Chance from "chance";
-import { evenlySplitNumber, splitNumber, SplitNumberBatch } from "../../../src/number/deconstruction";
+import { evenlySeparateNumber, evenlySplitNumber, splitNumber, SplitNumberBatch } from "../../../src/number/deconstruction";
 
 // tslint:disable: no-magic-numbers
 describe('Given [Number-Deconstruction] Help Function', (): void => {
 
     const chance: Chance.Chance = new Chance('numeric-number-deconstruction');
+
+    it('should be able to evenly separate number', (): void => {
+
+        const result: number[] = evenlySeparateNumber(100, 5);
+        expect(result).to.be.deep.equal(
+            [20, 20, 20, 20, 20],
+        );
+    });
+
+    it('should be able to evenly separate number - rest 1', (): void => {
+
+        const result: number[] = evenlySeparateNumber(101, 5);
+        expect(result).to.be.deep.equal(
+            [21, 20, 20, 20, 20],
+        );
+    });
+
+    it('should be able to evenly separate number - rest 2', (): void => {
+
+        const result: number[] = evenlySeparateNumber(104, 5);
+        expect(result).to.be.deep.equal(
+            [21, 21, 21, 21, 20],
+        );
+    });
 
     it('should be able to evenly split number', (): void => {
 
