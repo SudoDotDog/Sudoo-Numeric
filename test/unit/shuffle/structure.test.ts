@@ -43,4 +43,36 @@ describe('Given [Shuffle-Structure] Help Function', (): void => {
             },
         ] as FieldBasedDeployStructuralArrayElement[]);
     });
+
+    it('should be able to evenly deploy structure array using clone function', (): void => {
+
+        const anchor: string = chance.string();
+        const secondAnchor: string = chance.string();
+        const original = [{
+            anchor,
+            b: chance.string(),
+        }, {
+            anchor,
+            b: chance.string(),
+        }, {
+            anchor: secondAnchor,
+            b: chance.string(),
+        }];
+
+        const result: FieldBasedDeployStructuralArrayElement[] = fieldBasedDeployStructuralArray(original, 'anchor', (current: any) => ({
+            ...current,
+            anchor,
+        }));
+
+        expect(result).to.be.deep.equal([
+            {
+                fieldName: 'anchor',
+                fieldValue: anchor,
+                children: [original[0], original[1], {
+                    ...original[2],
+                    anchor,
+                }],
+            },
+        ] as FieldBasedDeployStructuralArrayElement[]);
+    });
 });
