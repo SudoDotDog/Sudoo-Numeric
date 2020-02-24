@@ -14,6 +14,24 @@ describe('Given [Shuffle-Array] Help Function', (): void => {
 
     const chance: Chance.Chance = new Chance('numeric-shuffle-array');
 
+    it('should be able to evenly deploy to zero length', (): void => {
+
+        const original: string[] = [
+            chance.string(),
+        ];
+
+        const result: string[][] = evenlyDeployArray(original, 0);
+        expect(result).to.be.deep.equal([]);
+    });
+
+    it('should be able to evenly deploy zero length array', (): void => {
+
+        const original: string[] = [];
+
+        const result: string[][] = evenlyDeployArray(original, 3);
+        expect(result).to.be.deep.equal([[], [], []]);
+    });
+
     it('should be able to evenly deploy array', (): void => {
 
         const original: string[] = [
