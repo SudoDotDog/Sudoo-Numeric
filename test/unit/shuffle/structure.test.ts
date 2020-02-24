@@ -13,6 +13,15 @@ describe('Given [Shuffle-Structure] Help Function', (): void => {
 
     const chance: Chance.Chance = new Chance('numeric-shuffle-structure');
 
+    it('should be able to evenly deploy structure zero length array', (): void => {
+
+        const original: any = [];
+
+        const result: FieldBasedDeployStructuralArrayElement[] = fieldBasedDeployStructuralArray(original, chance.string());
+
+        expect(result).to.be.deep.equal([]);
+    });
+
     it('should be able to evenly deploy structure array', (): void => {
 
         const anchor: string = chance.string();
