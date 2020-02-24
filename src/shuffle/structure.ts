@@ -6,7 +6,7 @@
 
 import { CloneFunction } from "../declare";
 
-export type FieldBasedDeployStructuralArrayElement<T extends Record<string, any>, K extends keyof T> = {
+export type FieldBasedDeployStructuralArrayElement<T extends Record<string, any> = any, K extends keyof T = any> = {
 
     readonly fieldName: K;
     readonly fieldValue: T[K];
