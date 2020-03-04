@@ -7,7 +7,7 @@
 import { CloneFunction, MatcherFunction } from "../declare";
 import { attemptCloneObject } from "../util";
 
-export const getFirstMatchedElement = <T extends any>(
+export const findFirstMatchedElement = <T extends any>(
     target: T[],
     matcher: MatcherFunction<T>,
     cloneFunction?: CloneFunction<T>,
@@ -22,7 +22,7 @@ export const getFirstMatchedElement = <T extends any>(
     return null;
 };
 
-export const getLastMatchedElement = <T extends any>(
+export const findLastMatchedElement = <T extends any>(
     target: T[],
     matcher: MatcherFunction<T>,
     cloneFunction?: CloneFunction<T>,
