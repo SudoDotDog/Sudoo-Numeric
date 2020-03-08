@@ -7,7 +7,11 @@
 import { parseCSVLine } from "./util";
 
 const fixString = (text: any): string => {
-    if (text === undefined) {
+
+    if (typeof text === 'string') {
+        return text;
+    }
+    if (typeof text === 'undefined') {
         return "";
     }
     if (text === null) {

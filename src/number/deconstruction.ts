@@ -25,6 +25,7 @@ export const evenlySplitNumber = (target: number, gap: number): number[] => {
     const intGap: number = Math.floor(gap);
 
     const count: number = Math.floor(intTarget / intGap);
+
     const result: number[] = [];
     for (let i = 0; i < count; i++) {
         result.push(intGap);
@@ -51,6 +52,7 @@ export const splitNumber = (target: number, gap: number): SplitNumberBatch[] => 
     const intGap: number = Math.floor(gap);
 
     const count: number = Math.floor(intTarget / intGap);
+
     const result: SplitNumberBatch[] = [];
     for (let i = 0; i < count; i++) {
         result.push({
