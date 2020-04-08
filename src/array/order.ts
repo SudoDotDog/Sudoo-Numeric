@@ -19,3 +19,11 @@ export const cdr = <T extends any>(target: T[]): T[] => {
     }
     return target.slice(1);
 };
+
+export const last = <T extends any>(target: T[]): T => {
+
+    if (target.length <= 0) {
+        return null as any;
+    }
+    return target[target.length - 1] as T;
+};
