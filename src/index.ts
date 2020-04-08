@@ -4,6 +4,7 @@
  * @description Index
  */
 
+export * from "./array/order";
 export * from "./csv/builder";
 export * from "./csv/csv";
 export * from "./csv/util";
