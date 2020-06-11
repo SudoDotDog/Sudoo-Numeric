@@ -21,7 +21,7 @@ tests:
 cov:
 	@echo "[INFO] Testing with Nyc and Mocha"
 	@NODE_ENV=test \
-	nyc $(mocha)
+	nyc $(mocha) --config test/.mocharc.json
 
 install:
 	@echo "[INFO] Installing dev Dependencies"
