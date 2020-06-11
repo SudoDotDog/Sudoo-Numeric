@@ -1,7 +1,4 @@
 {
-    "extension": [
-        "ts"
-    ],
     "spec": "test/**/*.test.ts",
-    "extends": "@sudoo/triforce"
+    "extends": "@sudoo/mocha-config"
 }
