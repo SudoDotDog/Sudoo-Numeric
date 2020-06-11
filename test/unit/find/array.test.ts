@@ -52,7 +52,7 @@ describe('Given [Find-Array] Help Function', (): void => {
 
         const result: ExampleObject | null = findFirstMatchedElement(target, (each: ExampleObject) => each.value === chance.natural());
 
-        // tslint:disable-next-line: no-unused-expression
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         expect(result).to.be.null;
     });
 
@@ -90,7 +90,7 @@ describe('Given [Find-Array] Help Function', (): void => {
 
         const result: ExampleObject | null = findLastMatchedElement(target, (each: ExampleObject) => each.value === chance.natural());
 
-        // tslint:disable-next-line: no-unused-expression
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         expect(result).to.be.null;
     });
 });

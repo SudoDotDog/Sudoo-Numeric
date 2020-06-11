@@ -4,9 +4,9 @@
  * @description Transform
  */
 
-// tslint:disable-next-line: variable-name
+// eslint-disable-next-line camelcase
 export const UNSAFE_transformToInteger = (target: number): number => {
 
-    // tslint:disable-next-line: no-bitwise
+    // eslint-disable-next-line no-bitwise
     return ~~target;
 };

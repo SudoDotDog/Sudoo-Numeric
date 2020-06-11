@@ -7,6 +7,7 @@
 
 import { expect } from "chai";
 import * as Chance from "chance";
+// eslint-disable-next-line camelcase
 import { UNSAFE_absolute } from "../../../../src/math/calculate";
 
 describe('Given [Math-Absolute] Help Function', (): void => {

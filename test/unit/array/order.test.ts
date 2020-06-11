@@ -32,7 +32,7 @@ describe('Given [Array-Order] Help Function', (): void => {
 
         const first: number = car(list);
 
-        // tslint:disable-next-line: no-unused-expression
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         expect(first).to.be.null;
     });
 
@@ -68,7 +68,7 @@ describe('Given [Array-Order] Help Function', (): void => {
 
         const lastValue: number = last(list);
 
-        // tslint:disable-next-line: no-unused-expression
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         expect(lastValue).to.be.null;
     });
 });

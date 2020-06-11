@@ -22,7 +22,7 @@ describe('Given [Math-Transform] Help Function', (): void => {
         });
 
         const result: number = UNSAFE_transformToInteger(testNumber);
-        const firstPart: string = testNumber.toString().split('.')[0] as string;
+        const firstPart: string = testNumber.toString().split('.')[0];
 
         expect(result).to.be.equal(Number(firstPart));
     });

@@ -19,10 +19,12 @@
         "strictNullChecks": true
     },
     "exclude": [
+        "../app",
         "../node_modules"
     ],
     "include": [
         "../src/**/*",
+        "../script/**/*",
         "../test/**/*"
     ]
 }

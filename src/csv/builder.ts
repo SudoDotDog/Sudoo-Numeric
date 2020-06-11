@@ -6,7 +6,7 @@
 
 export class CSVBuilder<A extends string[]> {
 
-    public static create<A extends string[]>(...fields: A) {
+    public static create<A extends string[]>(...fields: A): CSVBuilder<A> {
 
         return new CSVBuilder<A>(fields);
     }
