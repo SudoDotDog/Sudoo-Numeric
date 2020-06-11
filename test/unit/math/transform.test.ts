@@ -7,6 +7,7 @@
 
 import { expect } from "chai";
 import * as Chance from "chance";
+// eslint-disable-next-line camelcase
 import { UNSAFE_transformToInteger } from "../../../src/math/transform";
 
 describe('Given [Math-Transform] Help Function', (): void => {

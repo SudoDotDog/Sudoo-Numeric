@@ -4,9 +4,11 @@
         "Unmount",
         "WMXPY",
         "bwnl",
+        "camelcase",
         "clazz",
         "codecov",
         "docz",
+        "downlevel",
         "esnext",
         "forin",
         "splited",
@@ -14,6 +16,8 @@
         "triforce",
         "tshook"
     ],
-    "tslint.configFile": "typescript/tslint.json",
+    "eslint.options": {
+        "configFile": "./typescript/.eslintrc.json"
+    },
     "files.eol": "\n"
 }

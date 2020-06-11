@@ -9,9 +9,10 @@ import { expect } from "chai";
 import * as Chance from "chance";
 import { evenlySeparateNumber, evenlySplitNumber, splitNumber, SplitNumberBatch } from "../../../src/number/deconstruction";
 
-// tslint:disable: no-magic-numbers
+/* eslint-disable @typescript-eslint/no-magic-numbers */
 describe('Given [Number-Deconstruction] Help Function', (): void => {
 
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const chance: Chance.Chance = new Chance('numeric-number-deconstruction');
 
     it('should be able to evenly separate number', (): void => {
@@ -73,4 +74,3 @@ describe('Given [Number-Deconstruction] Help Function', (): void => {
         ] as SplitNumberBatch[]);
     });
 });
-// tslint:enable: no-magic-numbers
