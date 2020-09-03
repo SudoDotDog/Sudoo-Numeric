@@ -4,4 +4,6 @@
  * @description Calculate
  */
 
-export const 
+export const calculateArrayAverage = <T extends any = any>(list: T[],): number => {
+
+};
