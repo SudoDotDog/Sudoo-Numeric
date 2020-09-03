@@ -6,3 +6,11 @@
 [![downloads](https://img.shields.io/npm/dm/@sudoo/numeric.svg)](https://www.npmjs.com/package/@sudoo/numeric)
 
 :1234: Numeric
+
+## Install
+
+```sh
+yarn add @sudoo/numeric
+# Or
+npm install @sudoo/numeric --save
+```
