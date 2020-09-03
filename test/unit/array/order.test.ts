@@ -7,7 +7,7 @@
 
 import { expect } from "chai";
 import * as Chance from "chance";
-import { car, cdr, last } from "../../../src/array/order";
+import { car, cdr, last } from "../../../src";
 
 describe('Given [Array-Order] Help Function', (): void => {
 
