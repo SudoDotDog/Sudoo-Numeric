@@ -1,10 +1,10 @@
 /**
  * @author WMXPY
- * @namespace Numeric_Array
- * @description Calculate
+ * @namespace Numeric_Array_Calculate
+ * @description Average
  */
 
-import { ExtractFeatureFunction } from "../declare";
+import { ExtractFeatureFunction } from "../../declare";
 
 export const calculateArrayAverage = <T extends any = any>(list: T[], extractFeatureFunction?: ExtractFeatureFunction<T, number>): number => {
 
