@@ -4,7 +4,7 @@
  * @description Index
  */
 
-export * from "./array/calculate";
+export * from "./array/calculate/average";
 export * from "./array/order";
 export * from "./csv/builder";
 export * from "./csv/csv";
