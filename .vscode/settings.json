@@ -19,6 +19,5 @@
     ],
     "eslint.options": {
         "configFile": "./typescript/.eslintrc.json"
-    },
-    "files.eol": "\n"
+    }
 }
