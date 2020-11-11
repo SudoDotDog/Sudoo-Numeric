@@ -14,3 +14,7 @@ yarn add @sudoo/numeric
 # Or
 npm install @sudoo/numeric --save
 ```
+
+## Usage
+
+This package contains many util functions. Documents work in progress, see source code for all usages.
